@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)='onFormItemSubmit($event)' novalidate autocomplete="off">
+
+	<label for="">Nombre</label>
+	<input type="text" formControlName="name">
+  
+  <br>
+	<label for="">Email</label>
+	<input type="text" formControlName="email">
+  
+  <br>
+	<label for="">Phone</label>
+	<input type="text" formControlName="phone">
+
+  <app-form-main-date formControlName="date"></app-form-main-date>
+  <br>
+  <button>Enviar</button>
+
+</form>
+
+<hr>
+<pre>
+  {{ form.value | json}}
+</pre>
